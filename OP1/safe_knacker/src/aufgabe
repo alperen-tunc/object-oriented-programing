@@ -1,0 +1,42 @@
+
+--------------------------------------------------------
+		Safe-Knacker
+--------------------------------------------------------
+Schreiben Sie ein Java-Programm, das vom User nach Start abfragt, wie viel Stellen ein Zahlencode
+ haben soll den man knacken möchte.
+Nach Angabe der Anzahl der Stellen beginnt man mit dem ersten Versuch, diesen Code zu knacken.
+ Man gibt nacheinander für jede Stelle/Position eine Zahl zwischen 0 - 9 ein.
+Nach jedem Versuch wird dem User entweder gesagt, ob er eine Position richtig hatte oder nicht.
+Sollte eine oder mehrere Positionen richtig sein wird ihm angezeigt welche.
+Sobald man für alle Stellen die richtige Zahl aus 0 – 9 erraten hat, bekommt man eine Glückwunsch-Meldung
+als Ausgabe „Sie haben den Safe erfolgreich geöffnet sie brauchten
+dafür n viele Versuche (für n wird dem User die Anzahl der Versuche ausgegeben)
+der zu erratene Zahlencode war ...“
+
+Beispielausgabe:
+
+-------------------------------------------------------
+			Glückwunsch
+-------------------------------------------------------
+	Sie haben den Safe erfolgreich geöffnet.
+		Anzahl der Versuche: 4
+	Der zu erratene Zahlencode war : 0202
+-------------------------------------------------------
+
+
+Fangen Sie jegliche Ausnahmen(Exceptions) die bei der Benutzereingabe passieren können ab.
+Zusätzlich auch das bei der Eingabe der einzelnen Positionen nur eine Zahl
+von 0 bis 9 eingegeben werden kann.
+Nutzen Sie zu Umsetzung dieses Programmes das gesamte Vorwissen der letzten 2 Wochen.
+
+_______________________________________________________________________
+Zufallszahlen generieren für den Code
+Klasse Random in Java
+
+import java.util.Random;
+
+Beispiel:
+Random rd = new Random();
+int a = rd.nextInt(10) // eine Zahl zwischen 0 - 9
+System.out.println("Ausgabe einer Zahl zwischen 0 und 9 Zahl lautet: "+ a)
+________________________________________________________________________

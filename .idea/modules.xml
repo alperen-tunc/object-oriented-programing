@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OP1/00_Einfuerung/00_Einfuerung.iml" filepath="$PROJECT_DIR$/OP1/00_Einfuerung/00_Einfuerung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/05_Ausgabe_Datentype/05_Ausgabe_Datentype.iml" filepath="$PROJECT_DIR$/OP1/05_Ausgabe_Datentype/05_Ausgabe_Datentype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/10_Kontrollstrukturen_Methoden/10_Kontrollstrukturen_Methoden.iml" filepath="$PROJECT_DIR$/OP1/10_Kontrollstrukturen_Methoden/10_Kontrollstrukturen_Methoden.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/12_Exceptions/12_Exceptions.iml" filepath="$PROJECT_DIR$/OP1/12_Exceptions/12_Exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/15_Eingabe_Konvertierung/15_Eingabe_Konvertierung.iml" filepath="$PROJECT_DIR$/OP1/15_Eingabe_Konvertierung/15_Eingabe_Konvertierung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/20_String_Wrapperklassen/20_String_Wrapperklassen.iml" filepath="$PROJECT_DIR$/OP1/20_String_Wrapperklassen/20_String_Wrapperklassen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/25_Arrays/25_Arrays.iml" filepath="$PROJECT_DIR$/OP1/25_Arrays/25_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/30_ArraysMehrdimensional_Jagged/30_ArraysMehrdimensional_Jagged.iml" filepath="$PROJECT_DIR$/OP1/30_ArraysMehrdimensional_Jagged/30_ArraysMehrdimensional_Jagged.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/35_Collections/35_Collections.iml" filepath="$PROJECT_DIR$/OP1/35_Collections/35_Collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/40_Enums/40_Enums.iml" filepath="$PROJECT_DIR$/OP1/40_Enums/40_Enums.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/45_Klassen/45_Klassen.iml" filepath="$PROJECT_DIR$/OP1/45_Klassen/45_Klassen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/50_Konstruktoren/50_Konstruktoren.iml" filepath="$PROJECT_DIR$/OP1/50_Konstruktoren/50_Konstruktoren.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/60_Assoziationen/60_Assoziationen.iml" filepath="$PROJECT_DIR$/OP1/60_Assoziationen/60_Assoziationen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/70_Vererbung/70_Vererbung.iml" filepath="$PROJECT_DIR$/OP1/70_Vererbung/70_Vererbung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/80_Abstrakte_Klassen/80_Abstrakte_Klassen.iml" filepath="$PROJECT_DIR$/OP1/80_Abstrakte_Klassen/80_Abstrakte_Klassen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/85_Interfaces/85_Interfaces.iml" filepath="$PROJECT_DIR$/OP1/85_Interfaces/85_Interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Project.iml" filepath="$PROJECT_DIR$/Java_Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/_Pruefung/_Pruefung.iml" filepath="$PROJECT_DIR$/OP1/_Pruefung/_Pruefung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OP1/safe_knacker/safe_knacker.iml" filepath="$PROJECT_DIR$/OP1/safe_knacker/safe_knacker.iml" />
+    </modules>
+  </component>
+</project>
