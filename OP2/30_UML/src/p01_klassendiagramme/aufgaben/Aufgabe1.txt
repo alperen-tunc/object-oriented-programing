@@ -1,0 +1,7 @@
+- Zu den vorherigen Java-Aufgaben, UML Klassendiagramme mit DIA erstellen
+
+- WBS Verwaltungssystem als UML Klassendiagramm abbilden
+  + Dozent => Mitarbeiter => Person, Teilnehmer => Person, Versantaltung ....
+  + Person(id, vorname, nachname, adresse)
+  + Adresse(id, strasse, hausnummer, plz, ort)
+  + ....

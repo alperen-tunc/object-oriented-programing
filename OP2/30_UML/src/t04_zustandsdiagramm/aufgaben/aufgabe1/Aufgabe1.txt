@@ -1,0 +1,9 @@
+Erstellen Sie zur folgenden Situation ein Zustandsdiagramm:
+
+Wird der Automat eingeschaltet, befindet er sich im Zustand „Inaktiv“.
+Beim Eintritt in den Zustand „Inaktiv“ wird der Bildschirmschoner aktiviert.
+Ist ein Kunde am Automat, wechselt er in den Zustand „Aktiv“.
+Beim Eintritt in den Zustand „Aktiv“ wird das Menü angezeigt.
+Interagiert der Kunde mit dem Automat, wechselt er in den Zustand „In Verwendung“.
+Ist die Interaktion abgeschlossen, wird zurück in „Aktiv“ gewechselt.
+Wird kein Kunde am Automat festgestellt, wird zurück in „Inaktiv“ gewechselt.

@@ -1,0 +1,15 @@
+Unser Anwendungsbeispiel beschreibt ein mögliches Szenario einer Polizeikontrolle
+im Straßenverkehr. Das Szenario beginnt mit der Kommunikation zwischen einem
+Fahrer und dem Polizisten, welche mit den (visuellen) Signalen des Fahrers, dem
+Schlangenlinienfahren und der Operation des Anhaltens beschrieben wird. Danach
+werden parallel bzw. in beliebiger Reihenfolge die Personalien des Fahrers und die
+Fahrzeugpapiere überprüft. In diesem Szenario wird davon ausgegangen, dass beide in
+Ordnung sind, es wird also kein Alternativablauf beschrieben. Nach der Überprüfung der
+Papiere wird ein Alkoholtest optional („opt“) durchgeführt.
+
+An dieser Stelle interessiert allerdings nur das Ergebnis des Tests. Daher wird der Ablauf
+des Alkoholtests in einer ausgelagerten Interaktion dargestellt und an dieser Stelle nur
+darauf referenziert („ref“). Nach der Alkoholkontrolle werden je nach Ergebnis zwei
+alternative Kommunikationsmöglichkeiten („alt“) beschrieben. Ist der Alkoholwert
+zu hoch, wird dem Fahrer vom Polizisten signalisiert, dass er mit dem Polizisten zur
+Blutprobe muss. Ansonsten darf der Fahrer weiterfahren.
