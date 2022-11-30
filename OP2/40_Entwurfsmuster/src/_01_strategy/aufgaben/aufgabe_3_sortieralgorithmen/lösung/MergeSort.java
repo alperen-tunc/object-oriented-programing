@@ -1,4 +1,4 @@
-package op2.t04_entwurfsmuster.t01_strategy.aufgaben.aufgabe_3_sortieralgorithmen.lösung;
+package _01_strategy.aufgaben.aufgabe_3_sortieralgorithmen.lösung;
 public class MergeSort implements SortierStrategie {
     @Override
     public int[] sortiere(int[] zahlen){

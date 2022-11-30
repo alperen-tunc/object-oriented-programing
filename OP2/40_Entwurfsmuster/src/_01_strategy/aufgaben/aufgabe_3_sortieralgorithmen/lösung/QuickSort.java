@@ -1,4 +1,4 @@
-package op2.t04_entwurfsmuster.t01_strategy.aufgaben.aufgabe_3_sortieralgorithmen.lösung;
+package _01_strategy.aufgaben.aufgabe_3_sortieralgorithmen.lösung;
 public class QuickSort implements SortierStrategie {
     private int laenge;
     private int[] zahlen;

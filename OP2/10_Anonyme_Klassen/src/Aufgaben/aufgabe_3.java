@@ -1,10 +1,7 @@
 package Aufgaben;
 
-import jdk.dynalink.linker.LinkerServices;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 /* Sie bereiten Ihre Model-Klassen zur Verwendung in einer GUI vor. Um die Daten in den GUI Elementen darstellen zu können,

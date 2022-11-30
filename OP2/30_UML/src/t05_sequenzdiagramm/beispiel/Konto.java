@@ -1,4 +1,4 @@
-package op2.t03_UML.t05_sequenzdiagramm.beispiel;
+package t05_sequenzdiagramm.beispiel;
 
 public class Konto {
   
