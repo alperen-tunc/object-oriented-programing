@@ -14,6 +14,20 @@ public class MainApp {
     meinAuto.setBremsTechnologie( new BremseMitDTH() );
 
     meinAuto.bremsvorgangEinleiten();
+    System.out.println();
+
+    Auto tesla = new Auto();
+    BremsTechnologie fürTesla = new BremsTechnologie()
+    {
+      @Override
+      public void bremsen()
+      {
+        System.out.println("Ich wurde für tesla entwickelt");
+      }
+    };
+
+    tesla.setBremsTechnologie(fürTesla);
+    tesla.bremsvorgangEinleiten();
 
     System.out.println("\n======================= end of main() ======================");
   }

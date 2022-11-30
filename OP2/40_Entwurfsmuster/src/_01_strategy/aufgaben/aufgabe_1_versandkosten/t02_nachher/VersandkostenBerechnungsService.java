@@ -1,5 +1,7 @@
 package _01_strategy.aufgaben.aufgabe_1_versandkosten.t02_nachher;
 
+
+import _01_strategy.aufgaben.aufgabe_1_versandkosten.t01_vorher.Bestellung1;
 import _01_strategy.aufgaben.aufgabe_1_versandkosten.t02_nachher.versandstrategien.VersandStrategie;
 
 // Wir simulieren eine einfache Kostenberechnungsanwendung.
@@ -15,10 +17,12 @@ public class VersandkostenBerechnungsService {
 	public void setStrategie( VersandStrategie strategie ) {
 		this.strategie = strategie;
 	}
-	
-	//public double berechneVersandkosten( Bestellung bestellung) {
-	//	return strategie.berechneVersandkosten(bestellung);
-	//}
+
+
+    public double berechneVersandkosten(Bestellung bestellung1)
+	{
+		return strategie.berechneVersandkosten(bestellung1);
+	}
 	
 }
 

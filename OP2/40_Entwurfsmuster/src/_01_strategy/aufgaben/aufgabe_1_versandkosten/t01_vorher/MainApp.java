@@ -9,7 +9,7 @@ public class MainApp {
   public static void main( String[] args ) {
     System.out.println("============================================================");
     Adresse zielort = new Adresse("Hendrick", "Zuhause 12", "Dortmund", "12345", "GER");
-    Bestellung bestellung = new Bestellung(zielort, Versandoption.HERMES);
+    Bestellung1 bestellung = new Bestellung1(zielort, Versandoption.HERMES);
 		// =============================================================================
     VersandkostenBerechnungsService service = new VersandkostenBerechnungsService();
     double versandkosten = service.berechneVersandkosten(bestellung);

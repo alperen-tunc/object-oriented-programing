@@ -7,7 +7,7 @@ public class Bestellung {
 	
 	private Adresse zielort;
 	
-	public Bestellung( Adresse zielort){
+	public Bestellung(Adresse zielort){
 		this.zielort = zielort;
 
 	}

@@ -4,12 +4,13 @@ package _01_strategy.aufgaben.aufgabe_1_versandkosten.t01_vorher;
 import _01_strategy.aufgaben.aufgabe_1_versandkosten.entities.Adresse;
 import _01_strategy.aufgaben.aufgabe_1_versandkosten.entities.Versandoption;
 
-public class Bestellung {
+public class Bestellung1
+{
 	
 	private Versandoption versender;
 	private Adresse zielort;
 	
-	public Bestellung( Adresse zielort, Versandoption versender){
+	public Bestellung1(Adresse zielort, Versandoption versender){
 		this.zielort = zielort;
 		this.versender = versender;
 	}

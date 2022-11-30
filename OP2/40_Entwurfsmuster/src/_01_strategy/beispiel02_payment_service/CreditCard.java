@@ -35,6 +35,7 @@ public class CreditCard {
         this.number = number;
         this.date = date;
         this.cvv = cvv;
+        System.out.println("Neue Kredit Karte wurde erstellt:\n" + number + "\n" + date + "\n" + cvv);
     }
     
     public void setAmount( int amount ) {

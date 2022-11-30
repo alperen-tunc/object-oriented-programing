@@ -33,6 +33,7 @@ public class BezahlService {
   
   public void setKosten( int kosten ) {
     this.kosten = kosten;
+    System.out.println("Neue Kosten wurde erstellt." + kosten);
   }
   
   public void bezahlungEinleiten( String paymentMethod ) {

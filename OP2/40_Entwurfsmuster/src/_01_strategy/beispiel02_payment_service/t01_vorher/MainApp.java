@@ -6,7 +6,7 @@ public class MainApp {
     System.out.println("============================================================");
     BezahlService bezahlService = new BezahlService();
     bezahlService.setKosten(145);
-    //bezahlService.bezahlungEinleiten("CreditCard");
+    bezahlService.bezahlungEinleiten("CreditCard");
     bezahlService.bezahlungEinleiten("PayPal");
     System.out.println("======================= end of main() ======================");
   }

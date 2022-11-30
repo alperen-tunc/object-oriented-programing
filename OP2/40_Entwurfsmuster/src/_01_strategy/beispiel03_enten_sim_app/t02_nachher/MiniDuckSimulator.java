@@ -9,7 +9,7 @@ public class MiniDuckSimulator {
   public static void main( String[] args ) {
     System.out.println("============================================================");
     Duck mallard      = new MallardDuck();
-    Duck rubber = new RubberDuck();
+    Duck rubber       = new RubberDuck();
     Duck decoy        = new DecoyDuck();
     // =============================================================================
     mallard.performQuack();
@@ -19,7 +19,7 @@ public class MiniDuckSimulator {
     Duck model        = new ModelDuck();
     // =============================================================================
     model.performFly();
-    //model.setFlyBehavior( new FlyRocketPowered() ); // Flugverhalten in der Laufzeit ändern
+    model.setFlyBehavior( new FlyRocketPowered() ); // Flugverhalten in der Laufzeit ändern
     model.performFly();
     System.out.println("======================= end of main() ======================");
   }

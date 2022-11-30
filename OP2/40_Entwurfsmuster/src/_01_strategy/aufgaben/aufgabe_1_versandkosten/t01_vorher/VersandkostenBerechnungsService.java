@@ -7,7 +7,7 @@ package _01_strategy.aufgaben.aufgabe_1_versandkosten.t01_vorher;
 // Was könnten die Probleme sein?
 public class VersandkostenBerechnungsService {
 
-	public double berechneVersandkosten( Bestellung bestellung) {
+	public double berechneVersandkosten( Bestellung1 bestellung) {
 		
 		double result = -1.00d;
 		switch (bestellung.getVersendeMethode()) {
@@ -24,15 +24,15 @@ public class VersandkostenBerechnungsService {
 		return result;
 	}
 	
-	private double berechneFuerDHL( Bestellung bestellung) {
+	private double berechneFuerDHL( Bestellung1 bestellung) {
 		return 3.50d;
 	}
 	
-	private double berechneFuerHermes( Bestellung bestellung) {
+	private double berechneFuerHermes( Bestellung1 bestellung) {
 		return 2.95d;
 	}
 
-	private double berechneFuerUPS( Bestellung bestellung) {
+	private double berechneFuerUPS( Bestellung1 bestellung) {
 		return 4.00d;
 	}
 }
