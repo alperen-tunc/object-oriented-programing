@@ -22,9 +22,10 @@
  * SOFTWARE.
  */
 
-package op2.t04_entwurfsmuster.t01_strategy.beispiel02_payment_service.t01_vorher;
+package _01_strategy.beispiel02_payment_service.t01_vorher;
 
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.beispiel02_payment_service.CreditCard;
+
+import _01_strategy.beispiel02_payment_service.CreditCard;
 
 public class BezahlService {
   

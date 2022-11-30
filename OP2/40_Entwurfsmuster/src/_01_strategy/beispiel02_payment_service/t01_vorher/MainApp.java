@@ -1,4 +1,4 @@
-package op2.t04_entwurfsmuster.t01_strategy.beispiel02_payment_service.t01_vorher;
+package _01_strategy.beispiel02_payment_service.t01_vorher;
 
 public class MainApp {
   

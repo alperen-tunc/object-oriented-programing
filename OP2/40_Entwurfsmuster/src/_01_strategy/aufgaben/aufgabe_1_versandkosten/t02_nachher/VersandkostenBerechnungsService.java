@@ -1,6 +1,6 @@
-package op2.t04_entwurfsmuster.t01_strategy.aufgaben.aufgabe_1_versandkosten.t02_nachher;
+package _01_strategy.aufgaben.aufgabe_1_versandkosten.t02_nachher;
 
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.aufgaben.aufgabe_1_versandkosten.t02_nachher.versandstrategien.VersandStrategie;
+import _01_strategy.aufgaben.aufgabe_1_versandkosten.t02_nachher.versandstrategien.VersandStrategie;
 
 // Wir simulieren eine einfache Kostenberechnungsanwendung.
 // Die entstehenden Kosten werden auf Basis des verwendeten Versandanbieters berechnet: Hermes, DHL, UPS.
@@ -16,9 +16,9 @@ public class VersandkostenBerechnungsService {
 		this.strategie = strategie;
 	}
 	
-	public double berechneVersandkosten( Bestellung bestellung) {
-		return strategie.berechneVersandkosten(bestellung);
-	}
+	//public double berechneVersandkosten( Bestellung bestellung) {
+	//	return strategie.berechneVersandkosten(bestellung);
+	//}
 	
 }
 

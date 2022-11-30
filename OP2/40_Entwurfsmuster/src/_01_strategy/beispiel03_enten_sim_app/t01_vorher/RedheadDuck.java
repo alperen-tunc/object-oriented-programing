@@ -1,4 +1,4 @@
-package op2.t04_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t01_vorher;
+package _01_strategy.beispiel03_enten_sim_app.t01_vorher;
 
 public class RedheadDuck extends Duck {
   

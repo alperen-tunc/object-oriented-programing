@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-package op2.t04_entwurfsmuster.t01_strategy.beispiel02_payment_service.t02_nachher;
+package _01_strategy.beispiel02_payment_service.t02_nachher;
 
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.beispiel02_payment_service.t02_nachher.bezahl_strategien.BezahlStrategie;
+import _01_strategy.beispiel02_payment_service.t02_nachher.bezahl_strategien.BezahlStrategie;
 
 public class BezahlService {
   // Programmieren zum Supertypen

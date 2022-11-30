@@ -1,11 +1,8 @@
-package op2.t04_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t02_nachher;
+package _01_strategy.beispiel03_enten_sim_app.t02_nachher;
 
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t02_nachher.ducks.DecoyDuck;
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t02_nachher.ducks.Duck;
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t02_nachher.ducks.MallardDuck;
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t02_nachher.ducks.ModelDuck;
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t02_nachher.ducks.RubberDuck;
-import op2.op2_35_bis_50_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t02_nachher.fly.FlyRocketPowered;
+import _01_strategy.beispiel03_enten_sim_app.t02_nachher.ducks.*;
+import _01_strategy.beispiel03_enten_sim_app.t02_nachher.fly.FlyRocketPowered;
+
 
 public class MiniDuckSimulator {
   
@@ -22,7 +19,7 @@ public class MiniDuckSimulator {
     Duck model        = new ModelDuck();
     // =============================================================================
     model.performFly();
-    model.setFlyBehavior( new FlyRocketPowered() ); // Flugverhalten in der Laufzeit ändern
+    //model.setFlyBehavior( new FlyRocketPowered() ); // Flugverhalten in der Laufzeit ändern
     model.performFly();
     System.out.println("======================= end of main() ======================");
   }

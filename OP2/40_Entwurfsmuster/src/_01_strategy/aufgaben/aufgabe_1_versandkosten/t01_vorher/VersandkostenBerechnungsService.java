@@ -1,4 +1,4 @@
-package op2.t04_entwurfsmuster.t01_strategy.aufgaben.aufgabe_1_versandkosten.t01_vorher;
+package _01_strategy.aufgaben.aufgabe_1_versandkosten.t01_vorher;
 
 // Wir simulieren eine einfache Kostenberechnungsanwendung. Die entstehenden Kosten werden auf Basis des
 // verwendeten Versandanbieters berechnet: Hermes, DHL, UPS. 

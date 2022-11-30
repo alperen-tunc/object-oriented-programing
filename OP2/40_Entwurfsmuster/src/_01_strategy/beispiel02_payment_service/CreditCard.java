@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package op2.t04_entwurfsmuster.t01_strategy.beispiel02_payment_service;
+package _01_strategy.beispiel02_payment_service;
 
 public class CreditCard {
 
