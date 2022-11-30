@@ -1,0 +1,8 @@
+Strategiemuster mit Sortieralgorithmen
+
+Entwickeln Sie eine Konsolenanwendung mit Hilfe des Strategiemuster.
+Implementieren Sie bitte mindestens zwei Sortieralgorithmen.(beliebig wählbar, als Wiederholung bieten sich Bubblesort, Mergesort oder Quicksort an).
+Die Kontextklasse lädt eine konkrete Strategie und sortiert eine beliebige Zahlenfolge entsprechend der verwendeten Strategie.
+Die sortierte Collection wird an der Konsole ausgegeben.
+
+Zusatz: Das Programm kann gerne noch erweitert und dynamisch werden. Ein gutmütiger User gibt eine Zahlenfolge ein und wählt einen Sortieralgorithmus.

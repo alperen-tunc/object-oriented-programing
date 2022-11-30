@@ -1,0 +1,17 @@
+package op2.t04_entwurfsmuster.t01_strategy.beispiel03_enten_sim_app.t01_vorher;
+
+public class RubberDuck extends Duck {
+  
+  @Override
+  public void quark() {
+  }
+  
+  @Override
+  public void swim() {
+  }
+  
+  @Override
+  public void display() {
+  }
+  
+}
