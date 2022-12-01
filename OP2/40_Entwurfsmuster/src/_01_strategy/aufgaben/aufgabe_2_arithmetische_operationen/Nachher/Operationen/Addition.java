@@ -5,7 +5,7 @@ public class Addition implements OperationWaehlen
     @Override
     public double berechnen(double a, double b)
     {
-        System.out.println("Addition: " );
+        System.out.print("Addition: " );
         return (a+b);
     }
 }

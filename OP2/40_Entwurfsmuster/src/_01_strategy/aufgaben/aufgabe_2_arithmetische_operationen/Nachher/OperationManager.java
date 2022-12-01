@@ -5,26 +5,26 @@ import _01_strategy.aufgaben.aufgabe_2_arithmetische_operationen.Nachher.Operati
 import java.util.HashMap;
 import java.util.Map;
 
-public class ActionManager
+public class OperationManager
 {
-    private static Map<Character, OperationWaehlen> actionMap;
+    private static Map<Character, OperationWaehlen> operationMap;
 
     public static void init()
     {
-        actionMap = new HashMap<>();
-        actionMap.put('A', new Addition());
-        actionMap.put('S', new Subtraktion());
-        actionMap.put('D', new Division());
-        actionMap.put('M', new Multiplikation());
+        operationMap = new HashMap<>();
+        operationMap.put('A', new Addition());
+        operationMap.put('S', new Subtraktion());
+        operationMap.put('D', new Division());
+        operationMap.put('M', new Multiplikation());
     }
 
     public static OperationWaehlen getOperation(char userInput)
     {
-        if (actionMap == null)
+        if (operationMap == null)
         {
             init();
         }
-        OperationWaehlen operationWaehlen = actionMap.get(userInput);
+        OperationWaehlen operationWaehlen = operationMap.get(userInput);
         if (operationWaehlen == null)
         {
             operationWaehlen = new ExceptionClass();

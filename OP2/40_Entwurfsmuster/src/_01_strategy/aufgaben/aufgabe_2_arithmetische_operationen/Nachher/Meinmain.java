@@ -17,7 +17,7 @@ public class Meinmain
         System.out.println("Bitte geben Sie Rechenart \nAddition, \nSubtraktion, \nMultiplikation, \nDivision\n   ein: ");
         char antwort = (scanner.nextLine()).charAt(0);
 
-        OperationWaehlen operation = ActionManager.getOperation(antwort);
+        OperationWaehlen operation = OperationManager.getOperation(antwort);
 
         System.out.println("Geben Sie bitte erste Zahl ein: ");
         int zahl1 = Integer.parseInt(scanner.nextLine());
