@@ -3,12 +3,12 @@ package _01_strategy.beispiel03_enten_sim_app.t02_nachher.ducks;
 import _01_strategy.beispiel03_enten_sim_app.t02_nachher.fly.FlyBehavior;
 import _01_strategy.beispiel03_enten_sim_app.t02_nachher.quack.QuackBehavior;
 
-public abstract class Duck {
-  
+public abstract class Duck
+{
   FlyBehavior flyBehavior;
   QuackBehavior quackBehavior;
-  
-  public Duck() {
+  public Duck()
+  {
   }
   
   public void setFlyBehavior( FlyBehavior fb ) {

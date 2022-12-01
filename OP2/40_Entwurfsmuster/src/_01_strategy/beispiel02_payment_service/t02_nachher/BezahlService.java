@@ -26,7 +26,8 @@ package _01_strategy.beispiel02_payment_service.t02_nachher;
 
 import _01_strategy.beispiel02_payment_service.t02_nachher.bezahl_strategien.BezahlStrategie;
 
-public class BezahlService {
+public class BezahlService
+{
   // Programmieren zum Supertypen
   // Komposition gegenüber Vererbung vorziehen
   private BezahlStrategie strategie; // Komposition

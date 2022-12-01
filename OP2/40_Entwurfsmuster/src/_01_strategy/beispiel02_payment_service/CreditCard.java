@@ -24,14 +24,15 @@
 
 package _01_strategy.beispiel02_payment_service;
 
-public class CreditCard {
-
+public class CreditCard
+{
     private int amount = 1_000;
     private String number; // Kreditkartennummer
     private String date;   // Ablaufdatum
     private String cvv;    // Prüfziffer
     
-    public CreditCard( String number, String date, String cvv ) {
+    public CreditCard( String number, String date, String cvv )
+    {
         this.number = number;
         this.date = date;
         this.cvv = cvv;

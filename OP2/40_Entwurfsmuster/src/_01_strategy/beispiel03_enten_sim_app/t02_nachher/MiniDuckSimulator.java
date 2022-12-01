@@ -4,9 +4,10 @@ import _01_strategy.beispiel03_enten_sim_app.t02_nachher.ducks.*;
 import _01_strategy.beispiel03_enten_sim_app.t02_nachher.fly.FlyRocketPowered;
 
 
-public class MiniDuckSimulator {
-  
-  public static void main( String[] args ) {
+public class MiniDuckSimulator
+{
+  public static void main( String[] args )
+  {
     System.out.println("============================================================");
     Duck mallard      = new MallardDuck();
     Duck rubber       = new RubberDuck();

@@ -12,6 +12,6 @@ public class UserInput
         Action action = ActionManager.getAction(input);
         action.execute();
 
-        System.out.println("\n\nEnd of Main..");
+
     }
 }

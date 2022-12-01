@@ -1,5 +1,0 @@
-Mögliches Vorgehen: Der Trainer verteilt vorab die Ausgangssituation.
-(VersandStrategieUnrefaktorisiert).
-
-Gemeinsam mit den TN refaktorisieren wir die Anwendung nach
-dem Strategiemuster. (Musterlösung VersandStrategieRefaktorisiert)
