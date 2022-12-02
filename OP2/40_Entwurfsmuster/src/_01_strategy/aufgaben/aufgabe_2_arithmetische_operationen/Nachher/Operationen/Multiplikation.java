@@ -1,6 +1,6 @@
 package _01_strategy.aufgaben.aufgabe_2_arithmetische_operationen.Nachher.Operationen;
 
-public class Multiplikation implements OperationWaehlen
+public class Multiplikation implements Operation
 {
     @Override
     public double berechnen(double a, double b)

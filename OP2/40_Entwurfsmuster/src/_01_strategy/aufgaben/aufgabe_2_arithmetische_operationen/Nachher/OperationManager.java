@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class OperationManager
 {
-    private static Map<Character, OperationWaehlen> operationMap;
+    private static Map<Character, Operation> operationMap;
 
     public static void init()
     {
@@ -18,18 +18,14 @@ public class OperationManager
         operationMap.put('M', new Multiplikation());
     }
 
-    public static OperationWaehlen getOperation(char userInput)
+    public static Operation getOperation(char userInput)
     {
         if (operationMap == null)
         {
             init();
         }
-        OperationWaehlen operationWaehlen = operationMap.get(userInput);
-        if (operationWaehlen == null)
-        {
-            operationWaehlen = new ExceptionClass();
-            Meinmain.userInput();
-        }
+        Operation operationWaehlen = operationMap.get(userInput);
+
         return operationWaehlen;
     }
 }

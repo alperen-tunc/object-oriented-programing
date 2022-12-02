@@ -18,7 +18,6 @@ public class MainApp
 
         wahl(antwort,zahl1,zahl2);
 
-
         System.out.println("\n\nEnd of Main..");
     }
 
