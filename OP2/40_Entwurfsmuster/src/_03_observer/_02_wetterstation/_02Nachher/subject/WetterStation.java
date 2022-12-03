@@ -13,6 +13,16 @@ public class WetterStation implements Subject
 
     private List<Observer> observers;
 
+    public List<Observer> getObservers()
+    {
+        return observers;
+    }
+
+    public void setObservers(List<Observer> observers)
+    {
+        this.observers = observers;
+    }
+
     public WetterStation()
     {
         observers = new ArrayList<>();

@@ -19,6 +19,12 @@ public class MainApp
 
         wetterStation.setMessdaten(12.3f, 56.6f, 3.5f);
 
+        System.out.println();
+
+        anzeigeAktuell.update(15.3f, 23.5f, 3.4f);
+
+        wetterStation.notifyObservers();
+
         System.out.println("\n\nEnd of Main..");
     }
 }
