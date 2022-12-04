@@ -11,11 +11,20 @@ public class App
 {
     public static void main(String[] args)
     {
+
+        Strategy strategy1 = new Bubblesort();
+
+        int[] a = {33,22,11,55,23,15,12};
+
+        System.out.println(Arrays.toString(strategy1.operation(a)));
+        System.out.println();
+
         int[] arr1 = new int[5];
         boolean cont = false;
 
         Scanner scanner = new Scanner(System.in);
         Strategy strategy = null;
+
         while (true)
         {
             System.out.println("Bitte geben Sie Sortieralgorithmen \n(1) -> Bubblesort, \n(2) -> Quicksort, \n(3) -> " +
