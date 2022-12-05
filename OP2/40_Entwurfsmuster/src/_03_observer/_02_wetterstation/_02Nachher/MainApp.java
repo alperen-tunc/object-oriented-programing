@@ -26,5 +26,6 @@ public class MainApp
         wetterStation.notifyObservers();
 
         System.out.println("\n\nEnd of Main..");
+        
     }
 }
