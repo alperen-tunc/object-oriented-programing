@@ -1,0 +1,7 @@
+Erstellen Sie eine Anwendung, die mehrere BookService-Implementierungen benutzen kann.
+- Benötigt werden folgende Klassen: Book, FileBookService und DatabaseBookService,
+- Die Klasse MainApp soll per Benutzerauswahl eine Instanz FileBookService oder DatabaseBookService erstellen und anschließend die Methoden save(), read(), update() und delete() hintereinander aufrufen.
+- Jede Methode mit einer Konsolenausgabe versehen, z.B. "FileBookService.save()" bei der save()-Methode in FileBookService usw.
+- Es soll möglich sein die BookService-Implementierung in der Laufzeit zu ändern.
+
+Wie würden Sie vorgehen?

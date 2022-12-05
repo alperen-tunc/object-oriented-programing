@@ -1,0 +1,6 @@
+Verschiedene Pizza Stores berücksichtigen.
+
+Pizza Store New York: CheesePizzaNewYorkStyle, ClamPizzaNewYorkStyle, ...
+Pizza Store Chicago : CheesePizzaChicagoStyle, ClamPizzaChicagoStyle, ...
+
+oder ihre eigene Factory erstellen.
