@@ -4,7 +4,7 @@ public class App
 {
     public static void main(String[] args)
     {
-        Book book = new Book("Monte Kristo", "Abenteuer");
+        Book book = new Book("Monte Kristo", "Abenteuer, classic");
         BookService bookService;
         bookService = BookFactory.getInstance("file");
         bookService.read(book);
