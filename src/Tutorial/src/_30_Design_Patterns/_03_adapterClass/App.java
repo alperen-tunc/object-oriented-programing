@@ -16,6 +16,5 @@ public class App
 
         steckdose.gibElectric(handyAdapter);
 
-        System.out.println("\n\nEnd of Main..");
     }
 }
