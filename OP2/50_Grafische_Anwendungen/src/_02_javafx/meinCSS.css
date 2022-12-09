@@ -1,0 +1,14 @@
+/*
+    Document    : meinCss
+    Created on  : 09.12
+*/
+
+.root
+{
+    -fx-background-color: blue;
+}
+
+.button
+{
+    -fx-background-color: red;
+}

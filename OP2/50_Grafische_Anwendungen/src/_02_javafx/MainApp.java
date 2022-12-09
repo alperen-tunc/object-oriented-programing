@@ -4,21 +4,14 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class MainApp extends Application
 {
-/*
- Folgende Zeile in die VM-Optionen der "Run Configuration" der aktuellen MainApp hinzufügen:
-   --module-path \path\to\javafx-sdk-19\lib --add-modules=javafx.controls,javafx.fxml
- */
-
     public static void main(String[] args)
     {
         launch(args);
     }
-
     @Override
     public void start(Stage stage) throws IOException
     {
@@ -35,3 +28,10 @@ public class MainApp extends Application
     }
 }
 
+/*
+ Folgende Zeile in die VM-Optionen der "Run Configuration" der aktuellen MainApp hinzufügen:
+   --module-path \path\to\javafx-sdk-19\lib --add-modules=javafx.controls,javafx.fxml
+   --module-path "C:\Program Files (x86)\Java\javafx-sdk-11.0.2\lib" --add-modules=javafx.controls,javafx.fxml
+   https://gluonhq.com/products/scene-builder/</link></u>
+   https://gluonhq.com/products/javafx/</link></u>
+ */

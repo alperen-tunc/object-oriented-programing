@@ -1,0 +1,14 @@
+<firma>
+    <mitarbeiter-lsite>
+        <mitarbeiter id = "10">
+            <vorname>Peter</vorname>
+            <nachname>Schmidt</nachname>
+            <adresse>
+                <strasse>GartenWeg</strasse>
+                <hausnummer>12a</hausnummer>
+                <plz>50234</plz>
+                <ort>Köln</ort>
+            </adresse>
+        </mitarbeiter>
+    </mitarbeiter-lsite>
+</firma>
