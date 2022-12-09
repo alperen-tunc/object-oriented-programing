@@ -64,7 +64,7 @@ class Mitarbeiter extends FirmenMitglied
     public Mitarbeiter(String name)
     {
         super(name);
-        setGehalt(rand.nextDouble(200)+1900);
+        //setGehalt(rand.nextDouble(200)+1900);
         mitarbeiters.add(this);
     }
 }
@@ -81,7 +81,7 @@ class Vorgesetzter extends FirmenMitglied
     public Vorgesetzter(String name)
     {
         super(name);
-        setGehalt(rand.nextDouble(600)+3700 + rand.nextDouble(100)+450);
+        //setGehalt(rand.nextDouble(600)+3700 + rand.nextDouble(100)+450);
         vorgesetzters.add(this);
     }
 }
@@ -99,7 +99,7 @@ class Vorstandsvorsitzender extends FirmenMitglied
     public Vorstandsvorsitzender(String name)
     {
         super(name);
-        setGehalt(rand.nextDouble(1000)+7500 + rand.nextDouble(600)+2500 + (rand.nextDouble((umsatz*15/100)-(umsatz*5/100)+(umsatz*5/100))));
+        //setGehalt(rand.nextDouble(1000)+7500 + rand.nextDouble(600)+2500 + (rand.nextDouble((umsatz*15/100)-(umsatz*5/100)+(umsatz*5/100))));
         vorstandsvorsitzenders.add(this);
     }
 }
