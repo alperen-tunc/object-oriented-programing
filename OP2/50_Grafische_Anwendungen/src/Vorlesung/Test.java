@@ -1,17 +1,53 @@
 package Vorlesung;
 
-import javax.swing.*;
-import java.awt.*;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
-public class Test
+import java.awt.*;
+import java.io.IOException;
+import java.util.Objects;
+
+public class Test extends Application
 {
+    Label lbl = null;
+
     public static void main(String[] args)
     {
-        Button button = new Button("OK"); // Schaltfläche in AWT
-        JButton button1 = new JButton("OK"); // Schaltfläche in Swing
+        launch(args);
+    }
+    @Override
+    public void start(Stage stage) throws IOException
+    {
+       /*
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("Main.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        */
+        Button btn = new Button();
+
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
+        Scene scene = new Scene(root);
+        root.setOnKeyPressed(event -> System.out.println("Sie haben bestätigt"));
 
 
 
-        System.out.println("\n\nEnd of Main..");
+        stage.setTitle("My First JavaFX Application");
+        stage.setScene(scene);
+        stage.show();
+
+
+
     }
 }
+
+/*
+ Folgende Zeile in die VM-Optionen der "Run Configuration" der aktuellen MainApp hinzufügen:
+   --module-path \path\to\javafx-sdk-19\lib --add-modules=javafx.controls,javafx.fxml
+   --module-path "C:\Program Files (x86)\Java\javafx-sdk-11.0.2\lib" --add-modules=javafx.controls,javafx.fxml
+   https://gluonhq.com/products/scene-builder/
+   https://gluonhq.com/products/javafx/
+ */

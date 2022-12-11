@@ -11,4 +11,9 @@ public class MainController
     {
         System.out.println("Es wird gespeichert...");
     }
+
+    public void klick(ActionEvent actionEvent)
+    {
+        System.out.println("Ich habe es gebaut.");
+    }
 }

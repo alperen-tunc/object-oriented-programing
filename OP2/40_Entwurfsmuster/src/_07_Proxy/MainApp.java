@@ -11,6 +11,7 @@ public class MainApp
         WebServer server = createProxyServer();
         server.makeRequest(URL1);
         server.makeRequest(URL2);
+
         System.out.println("======================= end of main() ======================");
     }
 
