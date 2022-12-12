@@ -25,7 +25,7 @@ public class MainApp extends Application
 //        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
 //        Scene scene = new Scene(root);
 
-        stage.setTitle("Arithmetische Operationen");
+        stage.setTitle("Celcius_Fahrenheit");
         stage.setScene(scene);
         stage.show();
 
