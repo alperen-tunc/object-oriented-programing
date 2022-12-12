@@ -26,20 +26,14 @@ public class MainApp extends Application
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("Main.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         */
-        Button btn = new Button();
-
 
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
         Scene scene = new Scene(root);
         root.setOnKeyPressed(event -> System.out.println("Sie haben bestätigt"));
 
-
-
         stage.setTitle("My First JavaFX Application");
         stage.setScene(scene);
         stage.show();
-
-
 
     }
 }
