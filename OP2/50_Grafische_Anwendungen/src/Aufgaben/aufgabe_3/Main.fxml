@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aufgaben.aufgabe_3.MainController">
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aufgaben.aufgabe_3.MainController">
    <children>
       <HBox alignment="CENTER">
          <children>
@@ -25,14 +24,17 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </HBox>
-      <SplitPane dividerPositions="0.3102094240837696" prefHeight="351.0" prefWidth="600.0">
+      <SplitPane dividerPositions="0.3102094240837696" prefHeight="402.0" prefWidth="895.0">
          <items>
-            <ListView prefHeight="200.0" prefWidth="200.0" />
-            <VBox prefHeight="343.0" prefWidth="313.0">
+            <ListView fx:id="myListView" editable="true" prefHeight="400.0" prefWidth="394.0" />
+            <VBox>
                <children>
                   <HBox alignment="CENTER">
                      <children>
-                        <Label text="Buchdetails" />
+                        <Label text="Buchdetails">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children>
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -41,7 +43,7 @@
                   <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
                      <children>
                         <Label text="Titel:" />
-                        <TextField>
+                        <TextField fx:id="titel_tf" prefHeight="31.0" prefWidth="327.0">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
@@ -51,7 +53,7 @@
                   <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
                      <children>
                         <Label text="Verlag:" />
-                        <TextField>
+                        <TextField fx:id="verlag_tf" prefHeight="31.0" prefWidth="325.0">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
@@ -61,7 +63,7 @@
                   <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
                      <children>
                         <Label text="ISBN:" />
-                        <TextField>
+                        <TextField fx:id="isbn_tf" prefHeight="31.0" prefWidth="323.0">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
@@ -71,7 +73,7 @@
                   <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
                      <children>
                         <Label text="Author:" />
-                        <TextField>
+                        <TextField fx:id="author_tf" prefHeight="31.0" prefWidth="322.0">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
@@ -81,7 +83,7 @@
                   <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0">
                      <children>
                         <Label text="Datum:" />
-                        <TextField>
+                        <TextField fx:id="datum_tf" prefHeight="31.0" prefWidth="320.0">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
@@ -93,37 +95,37 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <Button mnemonicParsing="false" text="Neu anlegen">
+                        <Button mnemonicParsing="false" onAction="#neuAnlegen_tf" text="Neu anlegen">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="1">
+                        <Button mnemonicParsing="false" onAction="#eins_tf" text="1">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="2">
+                        <Button mnemonicParsing="false" onAction="#zwei_tf" text="2">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="3">
+                        <Button mnemonicParsing="false" onAction="#drei_tf" text="3">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="aktualisieren">
+                        <Button mnemonicParsing="false" onAction="#aktualisieren_tf" text="aktualisieren">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Löschen">
+                        <Button mnemonicParsing="false" onAction="#löschen_tf" text="Löschen">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Zrücksetzen">
+                        <Button mnemonicParsing="false" onAction="#zrücksetzen_tf" text="Zrücksetzen">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
