@@ -1,31 +1,18 @@
 package Aufgaben.aufgabe_3;
 
-        import javafx.beans.value.ChangeListener;
-        import javafx.beans.value.ObservableValue;
+        import javafx.collections.ObservableList;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
-        import javafx.fxml.Initializable;
         import javafx.scene.control.ListView;
         import javafx.scene.control.TextField;
-        import javafx.scene.layout.BorderPane;
 
-        import java.net.URL;
-        import java.util.ArrayList;
-        import java.util.Arrays;
-        import java.util.List;
-        import java.util.ResourceBundle;
-
-public class MainController implements Initializable
+public class MainController
 {
-    List<String> bücherList = new ArrayList<>();
+    Buch buch;
 
+    private BookService bookservice = new BookService();
     @FXML
-    private ListView<String> myListView = new ListView<>();
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1)
-    {
-        myListView.getItems().addAll(bücherList);
-    }
+    private ListView<Buch> myListView = new ListView<>();
 
     @FXML
     private TextField titel_tf;
@@ -42,21 +29,10 @@ public class MainController implements Initializable
     @FXML
     private TextField datum_tf;
 
-    String titel;
-    String author;
-
-    String textAuslesen()
-    {
-        titel = titel_tf.getText();
-        author = author_tf.getText();
-
-        return titel + " " + author;
-    }
 
     @FXML
     void aktualisieren_tf(ActionEvent event)
     {
-
 
     }
 
@@ -75,20 +51,30 @@ public class MainController implements Initializable
     @FXML
     void löschen_tf(ActionEvent event)
     {
-        bücherList.remove(bücherList.size()-1);
 
     }
 
     @FXML
     void neuAnlegen_tf(ActionEvent event)
     {
+        String titel = titel_tf.getText();
+        String verlag = verlag_tf.getText();
+        String isbn = isbn_tf.getText();
+        String author = author_tf.getText();
+        String datum = datum_tf.getText();
+        buch = new Buch(titel,author,isbn,verlag,datum);
 
-        bücherList.add(textAuslesen());
+        bookservice.save(buch);
+
+        ObservableList<Buch> bookItems = myListView.getItems();
+        bookItems.add(buch);
+
+
 
     }
 
     @FXML
-    void zrücksetzen_tf(ActionEvent event)
+    void zurücksetzen_tf(ActionEvent event)
     {
 
     }

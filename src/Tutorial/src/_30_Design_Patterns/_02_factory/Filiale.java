@@ -2,6 +2,7 @@ package Tutorial.src._30_Design_Patterns._02_factory;
 
 public class Filiale
 {
+
     public static void main(String[] args)
     {
         Handy s8 = Factory.getHandy("s8", "4000-MA", "22cm", "12cm");

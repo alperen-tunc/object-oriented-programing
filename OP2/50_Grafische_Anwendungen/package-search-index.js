@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"_01_mvc"},{"l":"_01_mvc.controller"},{"l":"_01_mvc.model"},{"l":"_02_javafx"},{"l":"_03_Applikation"},{"l":"Alle Packages","u":"allpackages-index.html"},{"l":"Aufgaben.aufgabe_1"},{"l":"Aufgaben.aufgabe_2"},{"l":"Aufgaben.aufgabe_3"},{"l":"Aufgaben.aufgabe_4"},{"l":"Vorlesung"}];updateSearchResults();

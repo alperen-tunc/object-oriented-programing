@@ -1,4 +1,4 @@
-package _15_Lambda;
+package Tutorial.src._15_Lambda;
 
 public class Application
 {
