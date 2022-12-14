@@ -1,4 +1,4 @@
-package Aufgaben.aufgabe_4;
+package Aufgaben.aufgabe_templade;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

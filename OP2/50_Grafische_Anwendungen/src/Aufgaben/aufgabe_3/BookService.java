@@ -25,13 +25,16 @@ public class BookService
         return bookList;
     }
 
-    public Book getBookById(int id) {
-        return null; //TODO
+    public void update( Book book ) {
+        for( int i = 0 ; i < bookList.size() ; i++ ) {
+            Book currentBook = bookList.get(i);
+            if (currentBook.getId() == book.getId()) {
+                bookList.set(i, book);
+            }
+        }
     }
 
-    public void update( Book book ) {
-        //TODO
-    }
+
 
     public void delete( int id ) {
         for( int i = 0 ; i < bookList.size() ; i++ ) {
