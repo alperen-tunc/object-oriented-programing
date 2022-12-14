@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Buch
+public class Book
 {
-    private List<Buch> buches = new ArrayList<>();
+    private List<Book> books = new ArrayList<>();
 
     private int id;
     private String titel;
@@ -15,7 +15,7 @@ public class Buch
     private String verlag;
     private String datum;
 
-    public Buch(int id, String titel, String author, String ISBN, String verlag, String datum)
+    public Book(int id, String titel, String author, String ISBN, String verlag, String datum)
     {
         this.id = id;
         this.titel = titel;
@@ -25,7 +25,7 @@ public class Buch
         this.datum = datum;
     }
 
-    public Buch(String titel, String author, String ISBN, String verlag, String datum)
+    public Book(String titel, String author, String ISBN, String verlag, String datum)
     {
         id++;
         this.titel = titel;
@@ -33,11 +33,11 @@ public class Buch
         this.ISBN = ISBN;
         this.verlag = verlag;
         this.datum = datum;
-        buches.add(this);
+        books.add(this);
     }
-    public Buch()
+    public Book()
     {
-        buches.add(this);
+        books.add(this);
     }
 
     public String getTitel()
@@ -113,11 +113,11 @@ public class Buch
         {
             return true;
         }
-        if (!(o instanceof Buch buch))
+        if (!(o instanceof Book book))
         {
             return false;
         }
-        return getId() == buch.getId();
+        return getId() == book.getId();
     }
 
     @Override
