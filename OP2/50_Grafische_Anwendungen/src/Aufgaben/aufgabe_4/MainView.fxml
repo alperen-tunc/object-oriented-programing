@@ -10,237 +10,219 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aufgaben.aufgabe_4.MainController">
-   <children>
-      <HBox alignment="CENTER">
-         <children>
-            <Label text="Personenverwaltung">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0"
+      prefWidth="1062.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Aufgaben.aufgabe_4.MainController">
+   <effect>
+      <Blend/>
+   </effect>
+   <HBox alignment="CENTER">
+      <Label text="Personenverwaltung">
+         <font>
+            <Font size="36.0"/>
+         </font>
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </HBox.margin>
+      </Label>
+   </HBox>
+   <SplitPane dividerPositions="0.30283018867924527" nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
+      <cursor>
+         <Cursor fx:constant="NONE"/>
+      </cursor>
+      <ListView fx:id="personListView" prefHeight="578.0" prefWidth="411.0"/>
+      <VBox>
+         <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+            <Label text="Person-Deatils">
                <font>
-                  <Font size="36.0" />
+                  <Font size="14.0"/>
                </font>
                <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </HBox.margin></Label>
-         </children>
-      </HBox>
-      <SplitPane dividerPositions="0.3294314381270903" nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
-         <items>
-            <VBox>
-               <children>
-                  <ListView VBox.vgrow="ALWAYS" />
-               </children>
-            </VBox>
-            <VBox>
-               <children>
-                  <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Label text="Person-Deatils">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Label text="Vorname" textOverrun="CENTER_WORD_ELLIPSIS" />
-                        <TextField fx:id="vorname_tf" HBox.hgrow="ALWAYS" />
-                        <Region HBox.hgrow="ALWAYS" />
-                        <Label text="Nachname" />
-                        <TextField fx:id="nachname_tf" HBox.hgrow="ALWAYS" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Label text="Geburtsdatum">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <DatePicker fx:id="datePicher_f" onAction="#getDate" HBox.hgrow="ALWAYS" />
-                        <Region HBox.hgrow="ALWAYS" />
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT">
-                     <children>
-                        <Label text="Strasse" />
-                        <TextField fx:id="strassenname_tf" HBox.hgrow="ALWAYS" />
-                        <Region HBox.hgrow="ALWAYS" />
-                        <Label text="Hausnummer" />
-                        <TextField fx:id="hausnummer_tf" HBox.hgrow="ALWAYS" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT">
-                     <children>
-                        <Label text="PLZ" />
-                        <TextField fx:id="plz_tf" HBox.hgrow="ALWAYS" />
-                        <Region HBox.hgrow="ALWAYS" />
-                        <Label text="Ort" />
-                        <TextField fx:id="ort_tf" HBox.hgrow="ALWAYS" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" />
-                  <HBox alignment="CENTER_LEFT">
-                     <children>
-                        <Label text="Krankenversicherung:">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Label>
-                        <RadioButton fx:id="gesetzlich_rb" mnemonicParsing="false" text="Gesetzlich">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                        <RadioButton fx:id="privat_rb" mnemonicParsing="false" text="Privat">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT">
-                     <children>
-                        <Label text="FamilienStatus:">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin></Label>
-                        <RadioButton fx:id="ledig_rb" mnemonicParsing="false" text="Ledig">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                        <RadioButton fx:id="verheiratet_rb" mnemonicParsing="false" text="Verheiratet">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                        <RadioButton fx:id="geschieden_rb" mnemonicParsing="false" text="Geschiden">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                        <RadioButton fx:id="getrentlebend_rb" mnemonicParsing="false" text="Getrenntlebend">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT">
-                     <children>
-                        <Label text="Programmiersprachen:">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin></Label>
-                        <CheckBox fx:id="java_cb" mnemonicParsing="false" text="Java">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin></CheckBox>
-                        <CheckBox fx:id="cSharp_cb" mnemonicParsing="false" text="C#">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin></CheckBox>
-                        <CheckBox fx:id="cPlusPlus_cb" mnemonicParsing="false" text="C++">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin></CheckBox>
-                        <CheckBox fx:id="php_cb" mnemonicParsing="false" text="PHP">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin></CheckBox>
-                        <CheckBox fx:id="andere_cb" mnemonicParsing="false" text="Andere">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin></CheckBox>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT">
-                     <children>
-                        <Button fx:id="neuAnlegen" mnemonicParsing="false" text="Neu Anlegen">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="person1" mnemonicParsing="false" text="1">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="person2" mnemonicParsing="false" text="2">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="person3" mnemonicParsing="false" text="3">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="aktualisieren" mnemonicParsing="false" text="Aktualisieren">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="löschen" mnemonicParsing="false" text="Löschen">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="zurücksetzen" mnemonicParsing="false" text="Zurücksetzen">
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-         </items>
-         <cursor>
-            <Cursor fx:constant="NONE" />
-         </cursor>
-      </SplitPane>
-      <HBox>
-         <children>
-            <Label text="Status Text">
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
                </HBox.margin>
             </Label>
-         </children>
-      </HBox>
-   </children>
+         </HBox>
+         <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label text="Vorname" textOverrun="CENTER_WORD_ELLIPSIS"/>
+            <TextField fx:id="vorname_tf" HBox.hgrow="ALWAYS"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Nachname"/>
+            <TextField fx:id="nachname_tf" HBox.hgrow="ALWAYS"/>
+         </HBox>
+         <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets/>
+            </VBox.margin>
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label text="Geburtsdatum">
+               <HBox.margin>
+                  <Insets/>
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="datePicher_f" onAction="#getDate" HBox.hgrow="ALWAYS"/>
+            <Region HBox.hgrow="ALWAYS"/>
+         </HBox>
+         <HBox alignment="CENTER_LEFT">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label text="Strasse"/>
+            <TextField fx:id="strassenname_tf" HBox.hgrow="ALWAYS"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Hausnummer"/>
+            <TextField fx:id="hausnummer_tf" HBox.hgrow="ALWAYS"/>
+         </HBox>
+         <HBox alignment="CENTER_LEFT">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label text="PLZ"/>
+            <TextField fx:id="plz_tf" HBox.hgrow="ALWAYS"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Ort"/>
+            <TextField fx:id="ort_tf" HBox.hgrow="ALWAYS"/>
+         </HBox>
+         <HBox prefHeight="100.0" prefWidth="200.0"/>
+         <HBox alignment="CENTER_LEFT">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label text="Krankenversicherung:">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Label>
+            <RadioButton fx:id="gesetzlich_rb" mnemonicParsing="false" text="Gesetzlich">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="privat_rb" mnemonicParsing="false" text="Privat">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </RadioButton>
+         </HBox>
+         <HBox alignment="CENTER_LEFT">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label text="FamilienStatus:">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Label>
+            <RadioButton fx:id="ledig_rb" mnemonicParsing="false" text="Ledig">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="verheiratet_rb" mnemonicParsing="false" text="Verheiratet">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="geschieden_rb" mnemonicParsing="false" text="Geschiden">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="getrentlebend_rb" mnemonicParsing="false" text="Getrenntlebend">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </RadioButton>
+         </HBox>
+         <HBox alignment="CENTER_LEFT">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Label text="Programmiersprachen:">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Label>
+            <CheckBox fx:id="java_cb" mnemonicParsing="false" text="Java">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="cSharp_cb" mnemonicParsing="false" text="C#">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="cPlusPlus_cb" mnemonicParsing="false" text="C++">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="php_cb" mnemonicParsing="false" text="PHP">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="andere_cb" mnemonicParsing="false" text="Andere">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </CheckBox>
+         </HBox>
+         <HBox alignment="CENTER_LEFT">
+            <Button mnemonicParsing="false" onAction="#neuAnlegen" text="Neu Anlegen">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#person1" text="1">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#person2" text="2">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#person3" text="3">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#aktualisieren" text="Aktualisieren">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#löschen" text="Löschen">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#zurücksetzen" text="Zurücksetzen">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+               </HBox.margin>
+            </Button>
+         </HBox>
+      </VBox>
+   </SplitPane>
+   <HBox>
+      <Label fx:id="statusInfo" text="Status Text">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </HBox.margin>
+      </Label>
+   </HBox>
 </VBox>

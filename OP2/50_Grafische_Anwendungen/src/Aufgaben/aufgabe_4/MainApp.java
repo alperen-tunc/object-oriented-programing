@@ -12,6 +12,7 @@ public class MainApp extends Application
     public static void main(String[] args)
     {
         launch(args);
+
         System.out.println("\n\nEnd of Main..");
     }
 
@@ -25,7 +26,7 @@ public class MainApp extends Application
 //        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
 //        Scene scene = new Scene(root);
 
-        stage.setTitle("Arithmetische Operationen");
+        stage.setTitle("Personen Verwaltung");
         stage.setScene(scene);
         stage.show();
 

@@ -13,8 +13,6 @@ package Aufgaben.aufgabe_3;
 
 public class MainController
 {
-    Book book;
-
     private BookService bookService = new BookService();
     @FXML
     private ListView<Book> bookListView = new ListView<>();
