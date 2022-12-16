@@ -118,9 +118,9 @@
                      <ToggleGroup fx:id="familienstatus" />
                   </toggleGroup>
                </RadioButton>
-               <RadioButton fx:id="verheiratet_rb" mnemonicParsing="false"  text="Verheiratet" toggleGroup="$familienstatus" />
-               <RadioButton fx:id="geschieden_rb" mnemonicParsing="false"  text="Geschieden" toggleGroup="$familienstatus" />
-               <RadioButton fx:id="getrenntLebend_rb" mnemonicParsing="false"  text="Getrenntlebend" toggleGroup="$familienstatus" />
+               <RadioButton fx:id="verheiratet_rb" mnemonicParsing="false" text="Verheiratet" toggleGroup="$familienstatus" />
+               <RadioButton fx:id="geschieden_rb" mnemonicParsing="false" text="Geschieden" toggleGroup="$familienstatus" />
+               <RadioButton fx:id="getrenntLebend_rb" mnemonicParsing="false" text="Getrenntlebend" toggleGroup="$familienstatus" />
             </children>
          </HBox>
          <HBox alignment="CENTER_LEFT">

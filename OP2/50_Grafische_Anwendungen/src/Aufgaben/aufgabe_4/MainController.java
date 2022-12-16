@@ -112,7 +112,8 @@ public class MainController
     }
 
     @FXML
-    void aktualisieren(ActionEvent event) {
+    void aktualisieren(ActionEvent event)
+    {
 
     }
 
