@@ -16,32 +16,59 @@ enum FamilienStatus
     LEDIG, VERHEIRATET, GESCHIEDEN, GETRENNTLEBEND
 }
 
-enum Programmiersprachen
-{
-    JAVA, CSHARP, CPLUSPLUS, PHP, ANDERE
-}
-
 public class Person
 {
     private String vorname;
     private String nachname;
-    private LocalDate Geburtsdatum;
+    private LocalDate geburtsdatum;
     private String strasse;
     private String hausnummer;
     private String plz;
     private String ort;
-
     private int id = 0;
+    private Krankenversicherung krankenversicherung;
+    private FamilienStatus familienStatus;
+    private List<String> programmSprachen = new ArrayList<>();
 
     public Person(String vorname, String nachname, LocalDate geburtsdatum, String strasse, String hausnummer, String plz, String ort)
     {
         this.vorname = vorname;
         this.nachname = nachname;
-        Geburtsdatum = geburtsdatum;
+        this.geburtsdatum = geburtsdatum;
         this.strasse = strasse;
         this.hausnummer = hausnummer;
         this.plz = plz;
         this.ort = ort;
+    }
+
+    public List<String> getProgrammSprachen()
+    {
+        return programmSprachen;
+    }
+
+    public void setProgrammSprachen(List<String> programmSprachen)
+    {
+        this.programmSprachen = programmSprachen;
+    }
+
+    public Krankenversicherung getKrankenversicherung()
+    {
+        return krankenversicherung;
+    }
+
+    public void setKrankenversicherung(Krankenversicherung krankenversicherung)
+    {
+        this.krankenversicherung = krankenversicherung;
+    }
+
+    public FamilienStatus getFamilienStatus()
+    {
+        return familienStatus;
+    }
+
+    public void setFamilienStatus(FamilienStatus familienStatus)
+    {
+        this.familienStatus = familienStatus;
     }
 
     public void setId(int id)
@@ -78,12 +105,12 @@ public class Person
 
     public LocalDate getGeburtsdatum()
     {
-        return Geburtsdatum;
+        return geburtsdatum;
     }
 
     public void setGeburtsdatum(LocalDate geburtsdatum)
     {
-        Geburtsdatum = geburtsdatum;
+        geburtsdatum = geburtsdatum;
     }
 
     public String getStrasse()
@@ -132,19 +159,26 @@ public class Person
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return id == person.id && Objects.equals(vorname, person.vorname) && Objects.equals(nachname, person.nachname) && Objects.equals(Geburtsdatum, person.Geburtsdatum) && Objects.equals(strasse, person.strasse) && Objects.equals(hausnummer, person.hausnummer) && Objects.equals(plz, person.plz) && Objects.equals(ort, person.ort);
+        return id == person.id && Objects.equals(vorname, person.vorname) && Objects.equals(nachname, person.nachname) && Objects.equals(geburtsdatum, person.geburtsdatum) && Objects.equals(strasse, person.strasse) && Objects.equals(hausnummer, person.hausnummer) && Objects.equals(plz, person.plz) && Objects.equals(ort, person.ort);
     }
 
     @Override
     public int hashCode()
     {
-        return Objects.hash(vorname, nachname, Geburtsdatum, strasse, hausnummer, plz, ort, id);
+        return Objects.hash(vorname, nachname, geburtsdatum, strasse, hausnummer, plz, ort, id);
     }
 
     @Override
     public String toString()
     {
-        return id + "-) " +  "Person{" + "vorname='" + vorname + '\'' + ", nachname='" + nachname + '\'' + ", " +
-            "Geburtsdatum=" + Geburtsdatum + ", strasse='" + strasse + '\'' + ", hausnummer='" + hausnummer + '\'' + ", plz='" + plz + '\'' + ", ort='" + ort + '\'' +  '}';
+
+
+        return  id + " -)" + "Person{" +
+                "vorname='" + vorname + '\'' +
+                ", nachname='" + nachname + '\'' +
+                ", geburtsdatum=" + geburtsdatum +
+                ", krankenversicherung=" + krankenversicherung +
+                ", familienStatus=" + familienStatus +
+                '}' + programmSprachen;
     }
 }

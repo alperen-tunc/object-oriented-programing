@@ -10,6 +10,7 @@ import javafx.scene.control.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.chrono.Chronology;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -93,7 +94,7 @@ public class MainController
 
         if(person.getVorname().trim().isEmpty())
         {
-            System.err.println("Bitte geben Sie Ihren Vornamen ein.");
+            statusInfo.setText("Bitte geben Sie Ihren Vornamen ein.");
             return;
         }
 
@@ -147,6 +148,7 @@ public class MainController
 
     private Person getPersonFromGui()
     {
+        Person person;
         String vorname = vorname_tf.getText();
         String nachname = nachname_tf.getText();
         LocalDate geburtsdatum = datePicher_f.getValue();
@@ -154,9 +156,66 @@ public class MainController
         String hausnummer = hausnummer_tf.getText();
         String plz = plz_tf.getText();
         String ort = ort_tf.getText();
+        person = new Person(vorname, nachname, geburtsdatum, strasse, hausnummer, plz, ort);
 
-        Person person = new Person(vorname, nachname, geburtsdatum, strasse, hausnummer, plz, ort);
+        if(gesetzlich_rb.isSelected())
+        {
+            person.setKrankenversicherung(Krankenversicherung.GESETZLICH);
+        }
+        else if (privat_rb.isSelected())
+        {
+            person.setKrankenversicherung(Krankenversicherung.PRIVAT);
+        }
+
+        if (ledig_rb.isSelected())
+        {
+            person.setFamilienStatus(FamilienStatus.LEDIG);
+        }
+        else if (verheiratet_rb.isSelected())
+        {
+            person.setFamilienStatus(FamilienStatus.VERHEIRATET);
+        }
+        else if (geschieden_rb.isSelected())
+        {
+            person.setFamilienStatus(FamilienStatus.GESCHIEDEN);
+        }
+        else if (getrentlebend_rb.isSelected())
+        {
+            person.setFamilienStatus(FamilienStatus.GETRENNTLEBEND);
+        }
+
+        List<String> programSprachen = new ArrayList<>();
+        if(java_cb.isSelected())
+        {
+            String java = "java";
+            programSprachen.add(java);
+        }
+        if (cSharp_cb.isSelected())
+        {
+            String cSharp = "C#";
+            programSprachen.add(cSharp);
+        }
+        if (cPlusPlus_cb.isSelected())
+        {
+            String cPlus = "C++";
+            programSprachen.add(cPlus);
+        }
+        if(php_cb.isSelected())
+        {
+            String php = "PHP";
+            programSprachen.add(php);
+        }
+        if(andere_cb.isSelected())
+        {
+            String andere = "Sie wissen eine andere Sprache";
+            programSprachen.add(andere);
+        }
+
+        person.setProgrammSprachen(programSprachen);
+
         return person;
     }
+
+
 
 }
