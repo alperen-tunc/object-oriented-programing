@@ -171,8 +171,6 @@ public class Person
     @Override
     public String toString()
     {
-
-
         return  id + " -)" + "Person{" +
                 "vorname='" + vorname + '\'' +
                 ", nachname='" + nachname + '\'' +

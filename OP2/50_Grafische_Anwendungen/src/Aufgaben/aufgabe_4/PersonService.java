@@ -19,4 +19,29 @@ public class PersonService
     {
         return personList;
     }
+
+    public void update(Person person)
+    {
+        for(int i=0; i< personList.size(); i++)
+        {
+            Person p = personList.get(i);
+            if (person.getId() == p.getId())
+            {
+                personList.set(i, person);
+            }
+        }
+    }
+
+    public void delete(int id)
+    {
+        for(int i=0; i< personList.size(); i++)
+        {
+            Person person = personList.get(i);
+            if (person.getId() == id)
+            {
+                personList.remove(i);
+            }
+        }
+    }
+
 }

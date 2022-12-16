@@ -122,8 +122,33 @@ public class MainController
     }
 
     @FXML
-    void löschen(ActionEvent event) {
+    void löschen(ActionEvent event)
+    {
+        if(noPersonSelected())
+        {
+            statusInfo.setText("Bitte wählen sie ein Person aus.");
+            return;
+        }
 
+        Person person = getSelectedPerson();
+
+        personService.delete(person.getId());
+
+        personListView.getItems().remove(person);
+        personListView.getSelectionModel().clearSelection();
+
+        statusInfo.setText("Person [" + person.getVorname() + "] wurde gelöscht");
+
+    }
+
+    private boolean noPersonSelected()
+    {
+        return getSelectedPerson() == null;
+    }
+
+    private Person getSelectedPerson()
+    {
+        return personListView.getSelectionModel().getSelectedItem();
     }
 
     @FXML
