@@ -69,7 +69,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <DatePicker fx:id="datePicher_f" onAction="#getDate" HBox.hgrow="ALWAYS" />
+            <DatePicker fx:id="datePicher_f" HBox.hgrow="ALWAYS" />
             <Region HBox.hgrow="ALWAYS" />
          </HBox>
          <HBox alignment="CENTER_LEFT">
@@ -120,7 +120,7 @@
                </RadioButton>
                <RadioButton fx:id="verheiratet_rb" mnemonicParsing="false" text="Verheiratet" toggleGroup="$familienstatus" />
                <RadioButton fx:id="geschieden_rb" mnemonicParsing="false" text="Geschieden" toggleGroup="$familienstatus" />
-               <RadioButton fx:id="getrenntLebend_rb" mnemonicParsing="false" text="Getrenntlebend" toggleGroup="$familienstatus" />
+               <RadioButton fx:id="getrentlebend_rb" mnemonicParsing="false" text="Getrenntlebend" toggleGroup="$familienstatus" />
             </children>
          </HBox>
          <HBox alignment="CENTER_LEFT">

@@ -115,11 +115,18 @@ public class MainController
     void aktualisieren(ActionEvent event)
     {
 
-    }
+        Person selectedPerson = getSelectedPerson();
+        int id = selectedPerson.getId();
+        Person personFromGui = getPersonFromGui();
+        personFromGui.setId(id);
 
-    @FXML
-    void getDate(ActionEvent event) {
+        personService.update(personFromGui);
 
+        ObservableList<Person> personItems = personListView.getItems();
+        int index = personListView.getSelectionModel().getSelectedIndex();
+        personItems.set(index, personFromGui);
+
+        statusInfo.setText(personFromGui.getVorname() + " wurde erfolgreich aktualisiert.");
     }
 
     @FXML

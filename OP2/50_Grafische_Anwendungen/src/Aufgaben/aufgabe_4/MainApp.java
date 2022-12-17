@@ -23,9 +23,6 @@ public class MainApp extends Application
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("MainView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-//        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
-//        Scene scene = new Scene(root);
-
         stage.setTitle("Personen Verwaltung");
         stage.setScene(scene);
         stage.show();
