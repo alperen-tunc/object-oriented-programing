@@ -32,7 +32,9 @@ public class aufgabe_2
             }
         };
 
-        Drucken(k1, platzhalter, k2);
+        IDruckbar platzhalter1 = () ->  "--";
+
+        Drucken(k1, platzhalter1, k2);
 
         System.out.println("======================= end of main() ======================");
     }
@@ -41,8 +43,9 @@ public class aufgabe_2
         System.out.println("Drucke..");
         for (IDruckbar d : druckbar)
         {
-            System.out.println(d.getInfo());
+            System.out.print(d.getInfo() + " ");
         }
+        System.out.println();
     }
 }
 
