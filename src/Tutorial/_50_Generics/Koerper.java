@@ -1,6 +1,6 @@
 package Tutorial._50_Generics;
 
-public class Koerper<A, B>
+public class Koerper<A extends Number, B extends Number>
 {
     private A a;
     private B b;
