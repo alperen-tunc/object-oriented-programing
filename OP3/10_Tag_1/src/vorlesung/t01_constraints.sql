@@ -1,0 +1,34 @@
+-- =============================================================
+DROP TABLE IF EXISTS PERSON;
+-- =============================================================
+CREATE TABLE PERSON
+(
+  ID       INT         /*PRIMARY KEY*/ /* NOT NULL, UNIQUE */,
+  VORNAME  VARCHAR(50) /* NOT NULL*/   /* UNIQUE */ DEFAULT 'NA',
+  NACHNAME VARCHAR(50)  NOT NULL       /* UNIQUE */ ,
+  ZAHL     INT          DEFAULT 100 CHECK ( ZAHL >= 50 ),
+
+  PRIMARY KEY (ID),
+  UNIQUE (VORNAME, NACHNAME),
+  CHECK ( ZAHL >= 50 )
+
+);
+
+ # ALTER TABLE PERSON ADD CONSTRAINT person_pk PRIMARY KEY (ID);
+# ALTER TABLE PERSON ADD CONSTRAINT person_uq UNIQUE (VORNAME, NACHNAME);
+# ALTER TABLE PERSON ADD CONSTRAINT person_check CHECK ( ZAHL >= 50 );
+# ALTER TABLE PERSON MODIFY ZAHL INT DEFAULT 100;
+
+
+
+INSERT INTO PERSON (ID, VORNAME, NACHNAME) VALUES (1, 'Peter', 'Schmidt');
+INSERT INTO PERSON (ID, VORNAME, NACHNAME) VALUES (2, 'Hans', 'Meyer');
+INSERT INTO PERSON (ID, VORNAME, NACHNAME) VALUES (3, 'Thomas', 'Heine');
+-- =======================================================================
+# INSERT INTO PERSON (ID, VORNAME, NACHNAME) VALUES (4, 'Klaus', 'Heine');
+# INSERT INTO PERSON (ID, VORNAME, NACHNAME, ZAHL) VALUES (5, 'Arnold', 'Klein', 44); /* 44 -> FEHLER */
+# INSERT INTO PERSON (ID, VORNAME, NACHNAME) VALUES (6, 'Peter', 'Schmidt');
+# INSERT INTO PERSON (ID,NACHNAME) VALUES (7, 'Klein');
+# DELETE FROM PERSON WHERE ID=4;
+
+# SELECT * FROM PERSON;
