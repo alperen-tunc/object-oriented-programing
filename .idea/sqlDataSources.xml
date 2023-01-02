@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="357f2595-8ed1-4922-acbe-8f03f3faf98f" name="Mariadb@localhost Mapping">
+      <data-sources db="fb20b8fb-8149-4984-9aa2-ab692b179a31" />
+      <scope>
+        <node kind="schema" qname="op3_db" />
+      </scope>
+    </mapping>
+  </component>
+</project>
