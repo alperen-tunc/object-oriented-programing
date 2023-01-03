@@ -9,13 +9,14 @@ public class MyJDBC
     public static void main(String[] args) throws SQLException
     {
         Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3307/op3_db",
+                "jdbc:mariadb://localhost:3307/op3_db",
                 "root", "1234");
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM produkt");
 
         List<Produkt> produktListe = new ArrayList<>();
-        while ( rs.next() ) {
+        while ( rs.next() )
+        {
             Long id = rs.getLong("ID");
             String Name = rs.getString("Name");
             double preis = rs.getDouble("Euro_Preis");

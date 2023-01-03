@@ -2,6 +2,7 @@
 DROP TABLE IF EXISTS KFZ;   -- KFZ hat ein FK zu PERSON
 DROP TABLE IF EXISTS PERSON;
 -- =============================================================
+
 CREATE TABLE PERSON
 (
   ID       INT         PRIMARY KEY,
