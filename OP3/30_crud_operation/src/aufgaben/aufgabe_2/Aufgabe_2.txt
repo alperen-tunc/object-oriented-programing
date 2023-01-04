@@ -1,0 +1,7 @@
+Für die one2one-Beziehung zwischen Person und Personalausweis:
+
+Es sollen alle Personen mit den zugehörigen Ausweisdaten ausgegeben werden
+- per SQL-Abfrage (dafür eine View)
+- per Java-Code
+
+P.S.: Datenbank R3 !!!

@@ -1,0 +1,21 @@
+============================================
+=                   SQL                    =
+============================================
+Erstellen Sie mit SQL eine neue Datenbank namens "t01_a01"
+Darin erstellen Sie eine Tabelle Book mit folgenden Attributen:
+- ID
+- TITLE
+- ISBN
+- PUBLISHER       # Verlag
+- AUTHOR          # Autor
+- PUBLISHING_DATE # Datum der Veröffentlichung
+
+Wählen Sie die passenden SQL-Datentypen für diese Attribute
+
+Erstellen mit SQL-Code 3 Bücher mit echten Buchdaten. (z.B. im Bereich Java, Python und C#)
+
+============================================
+=                  Java                    =
+============================================
+Erstellen Sie eine Java-Klasse mit einer main()-Methode.
+Mit Java-Code sollen Sie alle Bücherdaten in die Konsole ausgeben

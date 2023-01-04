@@ -1,0 +1,11 @@
+Für die many2many-Beziehung zwischen Employee (Mitarbeiter) und Project:
+
+Es sollen alle Mitarbeiter mit den zugehörigen Projekten ausgegeben werden
+- per SQL-Abfrage
+- per Java-Code
+
+Es sollen alle Projekte mit den zugehörigen Mitarbeitern ausgegeben werden
+- per SQL-Abfrage
+- per Java-Code
+
+P.S.: Datenbank R4 !!!
