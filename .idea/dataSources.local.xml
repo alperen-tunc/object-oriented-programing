@@ -12,6 +12,8 @@
       <schema-mapping>
         <introspection-scope>
           <node kind="schema">
+            <name qname="binarydata" />
+            <name qname="datatypes" />
             <name qname="r2" />
             <name qname="r3" />
             <name qname="r4" />
