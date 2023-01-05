@@ -24,6 +24,7 @@ public class main
         ResultSet resultSet = statement.executeQuery(sqlSelect);
 
         List<Person> personList = new ArrayList<>();
+        
         while (resultSet.next())
         {
             long person_id = resultSet.getLong("id");
@@ -36,6 +37,7 @@ public class main
             Person person = new Person(person_id, vorname, nachname, geburtsdatum, personalAusweis);
             personList.add(person);
         }
+
         connection.close();
         personList.forEach(System.out::println);
     }
