@@ -1,7 +1,7 @@
 package Tutorial._50_Generics;
 
 import java.util.Scanner;
-
+// Anfang
 public class App
 {
     public static void main(String[] args)
