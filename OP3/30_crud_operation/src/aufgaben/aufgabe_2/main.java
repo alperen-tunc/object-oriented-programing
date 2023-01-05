@@ -24,7 +24,7 @@ public class main
         ResultSet resultSet = statement.executeQuery(sqlSelect);
 
         List<Person> personList = new ArrayList<>();
-        
+
         while (resultSet.next())
         {
             long person_id = resultSet.getLong("id");
