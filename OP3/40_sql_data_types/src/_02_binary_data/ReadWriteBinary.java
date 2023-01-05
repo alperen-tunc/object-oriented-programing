@@ -1,7 +1,10 @@
 package _02_binary_data;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,11 +19,10 @@ public class ReadWriteBinary
     public static void main(String[] args) throws Exception
     {
         writeBinary();
-        readData();
+        readBinary();
     }
 
-    private static void readData() throws Exception
-    {
+    private static void readBinary() throws Exception {
         System.out.println("===================================================");
         System.out.println("=                Read with JDBC                   =");
         System.out.println("===================================================");
@@ -28,26 +30,44 @@ public class ReadWriteBinary
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM PERSON");
         List<Person> personList = new ArrayList<>();
-
-        while ( rs.next() )
-        {
+        while ( rs.next() ) {
             Long id = rs.getLong("ID");
             String vorname = rs.getString("VORNAME");
             String nachname = rs.getString("NACHNAME");
-            byte[] photo = rs.getBytes("PHOTO");
             Person person = new Person(id, vorname, nachname);
+            // ================================================
+            byte[] photo = rs.getBytes("PHOTO");
             person.setPhoto(photo);
-            Files.write(person.getPhotoFilename(), photo); // Photo wird in eine Datei gespeichert
+            // ================================================
+            //savePhotoToFileSystem(person);
+            //viewPhotoWithSwing(person);
             personList.add(person);
         }
         con.close();
-        personList.forEach(System.out::println); // Person.toString()
+        personList.forEach(ReadWriteBinary::viewPhotoWithSwing); // Person.toString()
+        personList.forEach(ReadWriteBinary::savePhotoToFileSystem); // Person.toString()
     }
+
+    private static void viewPhotoWithSwing( Person person ) {
+        byte[] image = person.getPhoto();
+        Image img = Toolkit.getDefaultToolkit().createImage(image);
+        JLabel photoLabel = new JLabel( new ImageIcon(img) );
+        photoLabel.setText(person.getFullname());
+        JOptionPane.showMessageDialog(null, photoLabel);
+    }
+
+    private static void savePhotoToFileSystem( Person person ) {
+        try {
+            // Photo wird in eine Datei gespeichert
+            Files.write(person.getPhotoFilename(), person.getPhoto());
+        } catch ( IOException e ) {}
+    }
+
     private static void writeBinary() throws Exception {
         System.out.println("===================================================");
         System.out.println("=               Create with JDBC                  =");
         System.out.println("===================================================");
-        Person person = new Person(4L, "Papa", "Schlumpf"); // z.B. aus Formular
+        Person person = new Person(7L, "Alperen", "Tunc"); // z.B. aus Formular
         Connection con = DriverManager.getConnection(urlTo("BinaryData"), DB_USERNAME, DB_PASSWORD);
         String sqlInsert = "INSERT INTO PERSON (ID, VORNAME, NACHNAME, PHOTO) VALUES (?, ?, ?, ?)";
         PreparedStatement stmt = con.prepareStatement(sqlInsert);
@@ -55,20 +75,26 @@ public class ReadWriteBinary
         stmt.setString(2, person.getVorname());
         stmt.setString(3, person.getNachname());
         // ================================================================
-
-        Path photoPath = Paths.get("C:\\Users\\Administrator\\Documents\\GitHub\\object-oriented-programing\\OP3\\40_sql_data_types\\src\\_02_binary_data\\images_1\\Papa_Smurf1.jpg");
+        Path photoPath = getPapaSchlumpfPhoto();
         //Path photoPath = getFromFileSystem();
         byte[] photo = Files.readAllBytes(photoPath);
         stmt.setBytes(4, photo);
-
         // ================================================================
         stmt.executeUpdate();
         con.close();
+    }
 
+    private static Path getPapaSchlumpfPhoto() {
+        URL url = ReadWriteBinary.class.getResource("images_1/Handy_Smurf.jpg");
+        String path = url.getPath().replaceFirst("/", "");
+        System.out.println("path: " + path);
+        return Path.of(path);
     }
 
     private static Path getFromFileSystem() {
-        JFileChooser choose = new JFileChooser(".");
+        URL url = ReadWriteBinary.class.getResource(".");
+        String dir = url.getFile();
+        JFileChooser choose = new JFileChooser(dir);
         int res = choose.showOpenDialog(null);
         File file = null;
         if (res == JFileChooser.APPROVE_OPTION) {
@@ -77,6 +103,7 @@ public class ReadWriteBinary
         }
         return file.toPath();
     }
+
 
 
 }

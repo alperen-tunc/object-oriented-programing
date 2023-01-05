@@ -97,4 +97,8 @@ public class Person {
         return String.format("(%d) - %-25s - Photo: %s", id, vorname + " " + nachname, getPhotoFilename());
     }
 
+    public String getFullname() {
+        return String.format("(%d) - %s", id, vorname + " " + nachname);
+    }
+
 }
