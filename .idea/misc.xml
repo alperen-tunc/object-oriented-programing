@@ -4,6 +4,18 @@
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/OP2/50_Grafische_Anwendungen" />
     <option name="OPTION_SCOPE" value="public" />
   </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/OP3/50_JPA/SpringDataJPA/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/OP3/SpringDataJPA/pom.xml" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
