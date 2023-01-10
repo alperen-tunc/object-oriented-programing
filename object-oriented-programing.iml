@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping />
+        <naming-strategy-map />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/META-INF/persistence.xml" />
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -7,5 +17,33 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/OP3/lib/javaee.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/javax.ejb.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/txw2-3.0.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/classmate-1.5.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jaxb-core-3.0.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/byte-buddy-1.12.18.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jandex-2.4.2.Final.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jaxb-runtime-3.0.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/antlr4-runtime-4.10.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jakarta.activation-2.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jakarta.inject-api-2.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jboss-logging-3.4.3.Final.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/mariadb-java-client-3.0.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/mariadb-java-client-3.1.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/hibernate-core-6.1.6.Final.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jakarta.xml.bind-api-3.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/istack-commons-runtime-4.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jakarta.persistence-api-3.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/jakarta.transaction-api-2.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/OP3/lib/hibernate-commons-annotations-6.0.2.Final.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

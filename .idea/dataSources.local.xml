@@ -12,6 +12,7 @@
       <schema-mapping>
         <introspection-scope>
           <node kind="schema">
+            <name qname="jpa_db" />
             <name qname="binarydata" />
             <name qname="datatypes" />
             <name qname="r2" />
