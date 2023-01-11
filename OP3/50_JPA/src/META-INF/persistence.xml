@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.1" >
-  <persistence-unit name="myPU" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="CRUD" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>_01_Entity.Person</class>
-    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3307/JPA_DB"/>
       <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
       <property name="jakarta.persistence.jdbc.user" value="root"/>
       <property name="jakarta.persistence.jdbc.password" value="1234"/>
       <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
-      <!--
-      <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect" />
-      -->
       <property name="hibernate.show_sql" value="true" />
-      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true" />
+    </properties>
+  </persistence-unit>
 
+  <persistence-unit name="REL" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>_03_relationships._01_one_to_one.Person</class>
+    <class>_03_relationships._01_one_to_one.Ausweis</class>
+    <!--
+    <class>Mitarbei</class>
+    <class>t02_jpa.p02_relationships.p02_one_to_many.Abteilung</class>
+    -->
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3307/JPA_DB"/>
+      <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+      <property name="jakarta.persistence.jdbc.user" value="root"/>
+      <property name="jakarta.persistence.jdbc.password" value="1234"/>
+      <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="javax.persistence.sql-load-script-source"
+                value="src/t02_jpa/p02_relationships/p01_one_to_one/One2One_DATA.sql" />
+
+      <!--      <property name="jakarta.persistence.schema-generation.database.action" value="none"/>-->
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="false" />
+      <!--      <property name="hbm2ddl.auto" value="create-drop" />-->
     </properties>
   </persistence-unit>
 </persistence>
